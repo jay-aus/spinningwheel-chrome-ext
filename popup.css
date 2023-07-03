@@ -1,0 +1,85 @@
+.container {
+  width: 200px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.message {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.wheel {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: 0 auto 10px;
+  background-image: url('spinningwheel.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rotation 3s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spinButton {
+  padding: 10px 20px;
+  background-color: #8ACB88;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#spinButton:disabled {
+  background-color: #EAEAEA;
+  color: #9E9E9E;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 24px;
+  font-family: "Comic Sans MS", cursive;
+  animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
